@@ -1,0 +1,97 @@
+@font-face {
+    font-family: 'Dancing';
+    src: url('./webfonts/DancingScript-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: 'KaushanScript';
+    src: url('./webfonts/KaushanScript-Regular.ttf');
+}
+
+@media (max-width:1279px) {
+    .signup-bg {
+        height: 150vh !important;
+    }
+}
+
+@media (max-width:767px) {
+    .mobPositon {
+        position: absolute;
+        top: 100px;
+        left: 0%;
+        z-index: -1;
+    }
+
+    .mobWidth {
+        width: 90% !important;
+    }
+}
+
+@media (max-width:400px) {
+    .signup-bg {
+        height: 165vh !important;
+    }
+}
+
+@media (min-width:768px) and (max-width:1023px) {
+    .mobWidth {
+        width: 50% !important;
+    }
+}
+
+@media (min-width:1280px) and (max-width:1399px) {
+    .signup-bg {
+        height: 135vh !important;
+    }
+}
+
+@media (min-width:1400px) {
+    .my-7 {
+        margin-top: 5.5rem !important;
+        margin-bottom: 5.5rem !important;
+    }
+}
+
+.nav-link {
+    color: white !important;
+    font-family: Dancing;
+    font-size: 20px;
+}
+
+.headerTitle,
+.form-title {
+    font-family: KaushanScript;
+}
+
+/* Header */
+.bg-cover {
+    background-size: cover !important;
+    height: 50vh;
+}
+
+/* Articles */
+.article-background {
+    background-image: url("/images/wallpaperflare.com_wallpaper.jpg");
+    background-size: cover;
+}
+
+/* login - signup */
+.login-bg {
+    background-image: url('./images/background.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+}
+
+.form-bg {
+    background-color: #ffffff14;
+}
+
+.w-35 {
+    width: 35%;
+}
+
+.check {
+    display: none;
+}

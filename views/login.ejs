@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+
+    <body class="login-bg">
+        <%-include("./partials/navbar.ejs") %>
+            <div class="container w-35 mobWidth border-5 shadow-lg p-3 my-4 my-7 form-bg rounded">
+                <h1 class="text-center text-capitalize form-title text-white">login</h1>
+                <form action="/login" method="post" class="my-5 text-capitalize">
+                    <div class="mb-5">
+                        <label for="username" class="form-label text-white">username</label>
+                        <input type="text" class="form-control" id="username" name="username" required>
+                        <% if(userMessage){ %>
+                            <label for="username" class="form-label text-danger">
+                                <%= userMessage %>
+                            </label>
+                            <% } %>
+                    </div>
+                    <div class="mb-5">
+                        <label for="password" class="form-label text-white">password</label>
+                        <input type="password" class="form-control" id="password" name="password" required>
+                        <% if(passwordMessage){ %>
+                            <label for="username" class="form-label text-danger">
+                                <%= passwordMessage %>
+                            </label>
+                            <% } %>
+                    </div>
+                    <button type="submit" class="btn btn-outline-success me-2">Login</button>
+                    <a href=""
+                        class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">forget
+                        password</a>
+                </form>
+            </div>
+    </body>
+
+</html>
