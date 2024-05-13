@@ -1,0 +1,13 @@
+<h1 class="text-capitalize text-center bg-secondary text-light p-2">recent articles</h1>
+<div class="d-flex flex-wrap justify-content-between">
+    <% articles.slice(-8).reverse().forEach(currentItem=> { %>
+        <div class="card m-5 article-background" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title text-light mb-5">
+                    <%= currentItem.title %>
+                </h5>
+                <a href="/articles/<%= currentItem._id %>" class="btn btn-primary mt-5">Read Article</a>
+            </div>
+        </div>
+        <% }); %>
+</div>
