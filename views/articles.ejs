@@ -1,0 +1,23 @@
+<div class="d-flex flex-wrap justify-content-between">
+    <% articles.reverse().forEach(currentItem=> { %>
+        <div class="card m-5 article-background" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title text-light mb-5">
+                    <%= currentItem.title %>
+                </h5>
+                <a href="/articles/<%= currentItem._id %>" class="btn btn-primary mt-5">Read Article</a>
+            </div>
+        </div>
+        <% }); %>
+</div>
+<div class="container text-center my-2">
+    <a class="btn btn-primary" href="?page=1">First</a>
+    <% if (currentPage> 1) { %>
+        <a class="btn btn-primary" href="?page=<%= currentPage - 1 %>">Previous</a>
+        <% } %>
+
+            <% if (currentPage < totalPages) { %>
+                <a class="btn btn-primary" href="?page=<%= currentPage + 1 %>">Next</a>
+                <% } %>
+                    <a class="btn btn-primary" href="?page=<%= totalPages %>">Last</a>
+</div>
