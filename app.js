@@ -8,9 +8,10 @@ import helmet from "helmet";
 
 import homeRouter from "./routes/homeRouter.js"
 import articlesRouter from "./routes/articlesRouter.js"
+import userRouter from "./routes/userRouter.js"
 import loginRouter from "./routes/loginRouter.js"
 import signupRouter from "./routes/signupRouter.js"
-import { logAccess, publicAccess } from "./middleware/loginAccess.js";
+import { logAccess, privateAccess, publicAccess } from "./middleware/loginAccess.js";
 
 dotenv.config();
 const app = express()
@@ -36,6 +37,7 @@ mongoose.connect(process.env.mongoConnection)
 app.get('/', (req, res) => { res.redirect('/home') })
 app.use('/home', publicAccess, homeRouter)
 app.use('/articles', publicAccess, articlesRouter)
+app.use('/user', privateAccess, userRouter)
 app.use('/login', logAccess, loginRouter)
 app.use('/signup', logAccess, signupRouter)
 app.get('/logout', (req, res) => {
