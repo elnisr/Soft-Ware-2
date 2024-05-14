@@ -1,0 +1,13 @@
+<div class=" border-3 shadow p-3 m-4 bg-white rounded">
+    <h1 class="text-center">
+        <%= article.title %>
+    </h1>
+    <p class="mt-4">
+        <%= article.details %>
+    </p>
+</div>
+<button id="delete" data-deleteArticle="<%= article._id %>" class="btn btn-danger ms-4 mb-4 text-capitalize">delete
+    article</button>
+<a class="btn btn-success ms-4 mb-4 text-capitalize" href="/user/myArticles/<%= article._id %>/updateArticle">update
+    article</a>
+<script src="/script.js"></script>
